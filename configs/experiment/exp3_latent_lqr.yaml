@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+  - override /model: structured_latent_arx
+experiment:
+  name: exp3_latent_lqr

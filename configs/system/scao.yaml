@@ -1,0 +1,15 @@
+# SCAO: one natural guide star, one Pyramid WFS, one ground DM (the notebook's system).
+defaults:
+  - telescope: small_8m
+  - atmosphere: single_layer
+  - guide_stars: ngs_on_axis
+  - dm: single_ground
+  - wfs: pyramid
+  - calibration: kl
+  - _self_
+name: scao
+backend: oopao            # oopao | synthetic
+n_threads: 8
+science:
+  band: I
+  directions: []          # empty: evaluate on guide star 0 (identical to the notebook)

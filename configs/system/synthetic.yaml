@@ -1,0 +1,34 @@
+# Fast modal surrogate (no OOPAO): AR(2) turbulence + optical-gain WFS. For tests and quick iteration.
+defaults:
+  - telescope: small_8m
+  - atmosphere: single_layer
+  - guide_stars: ngs_on_axis
+  - dm: single_ground
+  - wfs: pyramid
+  - calibration: kl
+  - _self_
+name: synthetic
+backend: synthetic
+n_threads: 1
+science:
+  band: I
+  directions: []
+calibration:
+  n_modes: 20
+synthetic:
+  n_modes: 20
+  n_high_order: 20
+  grid: 32
+  wavelength: 7.9e-7
+  r0_ref: 0.15
+  rms_ref_nm: 250.0          # modal turbulence RMS at r0_ref
+  fitting_rms_nm: 40.0       # out-of-basis RMS at r0_ref
+  ar_rho: [0.995, 0.96]      # AR(2) pole radius, low -> high modes
+  ar_omega: [0.01, 0.15]     # AR(2) pole angle [rad/frame]
+  hi_rho: 0.9
+  og_k0_spread: 0.1          # small-signal gain K0 = 1 ± spread
+  og_q: 1.0                  # optical-gain compression exponent
+  og_rm_nm: 150.0            # compression scale
+  signals_per_mode: 2
+  photon_noise_ref: 0.02     # signal noise std at magnitude 8
+  structure_seed: 1234

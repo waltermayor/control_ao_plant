@@ -1,0 +1,9 @@
+# Smoke-test protocol: minutes instead of hours.
+regimes:
+  normal: {r0: 0.15}
+  strong: {r0: 0.08}
+delays: [0]
+seeds: [21]
+n_steps: 100
+magnitude: null
+photon_noise: false

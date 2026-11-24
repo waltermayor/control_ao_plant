@@ -1,0 +1,9 @@
+enabled: false             # videos are slow; enable per run: video.enabled=true
+n_steps: 200
+record_every: 2
+fps: 15
+format: mp4                # mp4 (ffmpeg) | gif
+psf: true
+seed: 41
+regime: null               # null: first eval regime
+delay: null                # null: first eval delay

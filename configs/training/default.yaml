@@ -1,0 +1,8 @@
+device: auto               # auto (cuda > mps > cpu) | cpu | cuda | cuda:1 | mps
+allow_mps: true
+dtype: float32             # float64 reproduces the notebook's NumPy precision (not on MPS)
+eval_every: 250
+grad_clip: 5.0
+checkpoints: true          # save trained models; reuse a matching checkpoint instead of retraining
+force_retrain: false
+checkpoint_every: 1000     # resumable state every N iterations

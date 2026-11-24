@@ -1,0 +1,4 @@
+stars:
+  - {band: I, magnitude: 8, coordinates: [20.0, 0.0]}
+  - {band: I, magnitude: 8, coordinates: [20.0, 120.0]}
+  - {band: I, magnitude: 8, coordinates: [20.0, 240.0]}

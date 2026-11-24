@@ -1,0 +1,8 @@
+integrator:
+  gain: 0.4
+  leak: 1.0
+lqr:
+  rho: 1.0e-3              # relative penalty on DM effort
+latent:
+  cmax: 8.0                # saturation of latent commands [sigmas]
+  rmax: 0.9995             # spectral-radius cap of learned dynamics

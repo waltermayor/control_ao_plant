@@ -1,0 +1,8 @@
+# @package _global_
+experiment:
+  name: study_plant
+  seed: 1
+  n_steps: 300
+  sweep_gains: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]
+  sweep_delays: [0, 1, 2]
+  sweep_steps: 200

@@ -1,0 +1,6 @@
+type: pyramid
+n_subap: 10
+modulation: 3
+light_ratio: 0.5
+photon_noise: false
+readout_noise: 0.0

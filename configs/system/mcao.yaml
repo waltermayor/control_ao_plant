@@ -1,0 +1,19 @@
+# MCAO: asterism of guide stars (one WFS each), several DMs conjugated at different altitudes,
+# multi-layer atmosphere, performance evaluated over science directions.
+# NOTE: depends on OOPAO's off-axis / altitude-DM support; see TODO.md stage 4 (not validated yet).
+defaults:
+  - telescope: small_8m_wide
+  - atmosphere: three_layer
+  - guide_stars: asterism_3
+  - dm: two_dm_mcao
+  - wfs: pyramid
+  - calibration: kl_mcao
+  - _self_
+name: mcao
+backend: oopao
+n_threads: 8
+science:
+  band: K
+  directions:             # [zenith arcsec, azimuth deg]
+    - [0.0, 0.0]
+    - [20.0, 45.0]

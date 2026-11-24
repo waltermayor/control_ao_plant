@@ -1,0 +1,5 @@
+resolution: 120            # must be a multiple of the DM/WFS n_subap
+diameter: 8.0
+sampling_time: 1.0e-3
+central_obstruction: 0.0
+fov_arcsec: 0              # 0: automatic (needed > 0 only for off-axis sources)

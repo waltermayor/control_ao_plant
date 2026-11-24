@@ -1,0 +1,5 @@
+# @package _global_
+experiment:
+  name: exp1_oracle_lqr
+  horizons: [1, 2, 3]
+  rejection: {n_steps: 600, seed: 31, regime: normal, delay: 0, modes: [0, 1, 2]}

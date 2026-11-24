@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aoctrl"
+version = "0.1.0"
+description = "Research framework for learned-latent control of adaptive optics (OOPAO as the plant)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "pandas>=2.0",
+    "hydra-core>=1.3",
+    "omegaconf>=2.3",
+    "torch>=2.1",
+]
+
+[project.optional-dependencies]
+# OOPAO is not on PyPI under a stable name; install from GitHub.
+oopao = ["OOPAO @ git+https://github.com/cheritier/OOPAO.git"]
+wandb = ["wandb>=0.16"]
+video = ["imageio>=2.31", "imageio-ffmpeg>=0.4"]
+notebook = ["jupyterlab", "ipykernel"]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.scripts]
+aoctrl = "aoctrl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["oopao: requires the OOPAO simulator (skipped when not installed)"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B023", "B905", "B007", "E731", "E741", "UP037"]

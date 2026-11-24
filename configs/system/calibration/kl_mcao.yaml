@@ -1,0 +1,5 @@
+basis: kl
+n_modes: [60, 69]          # per DM (zonal: number of actuators kept)
+stroke: 1.0e-9
+rcond: 1.0e-3              # truncation of the global reconstructor
+basis_altitude_dm: zonal   # OOPAO's KL basis does not support altitude-DM metapupils

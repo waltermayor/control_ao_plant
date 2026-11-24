@@ -1,0 +1,5 @@
+resolution: 120
+diameter: 8.0
+sampling_time: 1.0e-3
+central_obstruction: 0.0
+fov_arcsec: 60

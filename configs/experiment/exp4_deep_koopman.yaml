@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+  - override /model: deep_koopman
+experiment:
+  name: exp4_deep_koopman

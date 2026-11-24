@@ -1,0 +1,9 @@
+level: INFO
+save_figures: true
+wandb:
+  enabled: true
+  project: aoctrl
+  entity: null
+  group: ${experiment.name}
+  mode: online
+  tags: ["${system.name}"]

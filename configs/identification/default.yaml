@@ -1,0 +1,28 @@
+# Truth-based identification used by the experiments (and their data-collection settings).
+turbulence:                # open-loop modal series (notebook §5)
+  n_steps: 1500
+  seed: 7
+  train_frac: 0.8
+ar:
+  orders: [1, 2]
+  rmax: 0.9995
+dm_sign:                   # residual − turbulence ≈ slope · command (notebook §6.2)
+  n_steps: 60
+  seed: 3
+optical_gain:              # Pyramid optical-gain identification (notebook §7.1–7.2)
+  n_steps: 600
+  seg: 50
+  dither: 0.1
+  seed_offset: 200
+  burn: 20
+  noise_floor_steps: 150
+  qs: [0.5, 1.0, 2.0]
+  rm_grid: {log10_min: -7.7, log10_max: -4.7, n: 40}
+latent_data:               # (y, u) data for the learned latents (notebook §8.3)
+  n_steps: 2000
+  seg: 50
+  dither: 0.15
+  seed_offset: 300
+  horizon: 6
+  stride: 2
+  val_frac: 0.15

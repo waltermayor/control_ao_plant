@@ -1,0 +1,6 @@
+# @package _global_
+experiment:
+  name: study_atmosphere
+  seed: 1
+  psd_modes: [0, 1, 5, 20, 50]
+  nperseg: 256

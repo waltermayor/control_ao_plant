@@ -1,0 +1,2 @@
+stars:
+  - {band: I, magnitude: 8, coordinates: [0.0, 0.0]}   # [zenith arcsec, azimuth deg]

@@ -1,0 +1,6 @@
+# @package _global_
+experiment:
+  name: exp2_ekf_lqr
+  ekf:
+    knows_r0: true         # Q, P0 scaled with the regime's r0 (else identification r0)
+    model_err: 0.05        # sensor-model error (fraction of modal turbulence RMS) added to R

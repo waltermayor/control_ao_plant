@@ -1,0 +1,9 @@
+# Faint star with photon noise: where filtering (EKF) should pay off.
+regimes:
+  normal: {r0: 0.15}
+  strong: {r0: 0.08}
+delays: [0, 2]
+seeds: [21, 22]
+n_steps: 250
+magnitude: 12
+photon_noise: true

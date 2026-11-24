@@ -1,0 +1,2 @@
+mirrors:
+  - {n_subap: 10, mech_coupling: 0.35, altitude: 0.0}

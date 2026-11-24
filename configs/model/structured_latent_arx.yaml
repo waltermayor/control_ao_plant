@@ -1,0 +1,13 @@
+# Experiment 3 model (notebook §8.1)
+kind: structured_latent_arx
+hidden: 128
+init_seed: 0
+train:
+  steps: 4000
+  batch: 128
+  lr: 2.0e-3
+  lin_lr_factor: 0.3       # LR factor of the dynamics (A1, A2, Ac1, Ac2, B0)
+  reg: 1.0e-4              # L2 on the output layers
+  reg_dyn: 3.0e-3          # anchor of the dynamics to the initial ARX
+  seed: 0
+  weights: {rec: 1.0, one: 1.0, lat1: 0.1, pred: 0.3, lat: 0.03}

@@ -1,0 +1,5 @@
+# @package _global_
+experiment:
+  name: compare
+  experiments: [exp1_oracle_lqr, exp2_ekf_lqr, exp3_latent_lqr, exp4_deep_koopman]
+  show: null               # list of controller names, or null for all

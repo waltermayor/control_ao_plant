@@ -1,0 +1,9 @@
+# Evaluation protocol shared by experiments 1–4 (paired seeds across controllers).
+regimes:
+  normal: {r0: 0.15}
+  strong: {r0: 0.08}
+delays: [0, 2]             # extra DM delay [frames] (the loop already has 1 frame)
+seeds: [21, 22]
+n_steps: 250
+magnitude: null            # null: guide-star magnitude of the system
+photon_noise: false

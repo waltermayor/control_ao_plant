@@ -1,0 +1,11 @@
+# @package _global_
+experiment:
+  name: study_sensor
+  seed: 1
+  sweep_modes: [0, 5, 20]
+  sweep_amp_nm: 400
+  sweep_points: 21
+  og_probe_nm: 5
+  og_realisations: 5
+  noise_magnitudes: [6, 8, 10, 12, 14]
+  noise_steps: 60

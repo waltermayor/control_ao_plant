@@ -1,0 +1,35 @@
+# Primary config. Compose from the command line, e.g.
+#   python -m aoctrl.cli experiment=exp2_ekf_lqr system=scao eval=quick
+#   python -m aoctrl.cli experiment=study_atmosphere system/atmosphere=three_layer
+defaults:
+  - system: scao
+  - identification: default
+  - control: default
+  - eval: default
+  - model: null            # experiments 3/4 select one (structured_latent_arx / deep_koopman)
+  - training: default
+  - logging: default
+  - video: default
+  - experiment: exp1_oracle_lqr
+  - _self_
+
+seed: 0
+close_figures: true        # set false in notebooks to keep figures open in ExperimentResult
+
+cache:
+  enabled: true            # reuse calibration / turbulence / reference runs / identification data
+
+paths:                     # relative paths are resolved against the repository root
+  cache_dir: cache
+  checkpoint_dir: checkpoints
+  results_dir: results
+  output_dir: null         # set by Hydra (CLI) or by aoctrl.api (notebooks)
+
+hydra:
+  run:
+    dir: outputs/${experiment.name}/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: multirun/${experiment.name}/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.num}
+  job:
+    chdir: false

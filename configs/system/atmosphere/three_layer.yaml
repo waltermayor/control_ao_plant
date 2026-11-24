@@ -1,0 +1,6 @@
+r0: 0.15
+L0: 25.0
+layers:
+  - {altitude: 0.0,     wind_speed: 10.0, wind_direction: 0.0,   fractional_r0: 0.6}
+  - {altitude: 4000.0,  wind_speed: 15.0, wind_direction: 60.0,  fractional_r0: 0.25}
+  - {altitude: 10000.0, wind_speed: 25.0, wind_direction: 135.0, fractional_r0: 0.15}

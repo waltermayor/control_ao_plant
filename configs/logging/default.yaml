@@ -1,0 +1,9 @@
+level: INFO
+save_figures: true
+wandb:
+  enabled: false           # true to log to Weights & Biases
+  project: aoctrl
+  entity: null
+  group: null
+  mode: online             # online | offline | disabled
+  tags: []

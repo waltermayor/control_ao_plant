@@ -1,0 +1,4 @@
+# @package _global_
+experiment:
+  name: study_calibration
+  show_modes: [0, 1, 2, 5, 10, 30]

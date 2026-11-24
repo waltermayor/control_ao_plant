@@ -1,0 +1,3 @@
+basis: kl                  # kl | zonal
+n_modes: 60
+stroke: 1.0e-9

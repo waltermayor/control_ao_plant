@@ -1,0 +1,19 @@
+# Experiment 4 model (notebook §9.1)
+kind: deep_koopman
+nz: null                   # latent dimension; null -> nz_factor * n_modes
+nz_factor: 4
+hidden_enc: 128
+hidden_dec: 128
+init_seed: 0
+ridges: [1.0e-6, 1.0e-5, 1.0e-4, 1.0e-3, 1.0e-2, 1.0e-1, 1.0]
+rmax: 0.9995
+include_physical_reference: true
+train:
+  steps: 3000
+  batch: 128
+  lr: 2.0e-3
+  lin_lr_factor: 0.3       # LR factor of A, B, Pe, Pd
+  reg: 1.0e-3
+  reg_dyn: 1.0e-2
+  seed: 0
+  weights: {rec: 1.0, one: 1.0, lat1: 0.1, pred: 0.3, lat: 0.03}
